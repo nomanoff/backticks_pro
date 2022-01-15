@@ -6,9 +6,9 @@ import MasonryLayout from "./MasonryLayout";
 import Spinner from "./Spinner";
 
 const Feed = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   if (loading) {
-    <Spinner message="Loading..." />;
+    return <Spinner message="Loading..." />;
   }
   return <div>Feed</div>;
 };
