@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { client } from "../client";
-import { searchQuery } from "../utils/data";
+import { feedQuery, searchQuery } from "../utils/data";
 import MasonryLayout from "./MasonryLayout";
 import Spinner from "./Spinner";
 
@@ -24,6 +24,10 @@ const Feed = () => {
         setLoading(false);
       });
     } else {
+      client.fetch(feedQuery).then((data) => {
+        setPins(data);
+        setLoading(false);
+      });
     }
   }, [categoryId]);
 
@@ -31,7 +35,7 @@ const Feed = () => {
     return <Spinner message="Loading..." />;
   }
 
-  return <div>Feed</div>;
+  return <div>{pins && <MasonryLayout pins={pins} />}</div>;
 };
 
 export default Feed;
