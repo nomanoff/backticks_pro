@@ -99,7 +99,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                   type="button"
                   className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
                 >
-                  Save
+                  {save?.length} {savingPost ? "Saving" : "Save"}
                 </button>
               )}
             </div>
@@ -136,7 +136,17 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
         )}
       </div>
 
-      <Link to={`user-profile/${user?._id}`}></Link>
+      <Link
+        to={`user-profile/${postedBy?._id}`}
+        className="flex gap-2 mt-2 items-center"
+      >
+        <img
+          className="w-8 h-8 rounded-full object-cover"
+          src={postedBy?.image}
+          alt="user-profile"
+        />
+        <p className="font-samibold capitalize">{postedBy?.userName}</p>
+      </Link>
     </div>
   );
 };
