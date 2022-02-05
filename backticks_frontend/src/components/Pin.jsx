@@ -12,6 +12,8 @@ const Pin = ({ pin: { postedBy, image, _id, destination } }) => {
   const [postHovered, setPostHovered] = useState(false);
   const [savingPost, setSavingPost] = useState(false);
 
+  let alreadySaved = 0;
+
   return (
     <div className="m-2">
       <div
@@ -42,6 +44,12 @@ const Pin = ({ pin: { postedBy, image, _id, destination } }) => {
                   <MdDownloadForOffline />
                 </a>
               </div>
+
+              {alreadySaved?.length !== 0 ? (
+                <button>Saved</button>
+              ) : (
+                <button>Save</button>
+              )}
             </div>
           </div>
         )}
