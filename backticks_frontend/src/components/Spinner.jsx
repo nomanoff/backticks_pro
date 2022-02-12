@@ -1,11 +1,11 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 
-const Spinner = ({ message }) => {
+const Spinner = ({ message, type = "Circles" }) => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
       <Loader
-        type="Circles"
+        type={type}
         color="#00BFFF"
         height={50}
         width={200}
