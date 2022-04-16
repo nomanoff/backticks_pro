@@ -1,9 +1,0 @@
-  {
-    "name": "backticks",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "scripts": {
-      "build:frontend": "npm --prefix backticks_frontend react-scripts build"
-    }
-  }
