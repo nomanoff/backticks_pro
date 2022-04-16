@@ -4,6 +4,6 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "build:frontend": "npm --prefix backticks_frontend run build"
+      "build:frontend": "npm --prefix backticks_frontend react-scripts build"
     }
   }
