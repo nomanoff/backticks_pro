@@ -8,4 +8,4 @@ React, Tailwind & Sanity
 
 ## Demo:
 
-Checkout out the website here:
+Link: [https://backticks.netlify.app/](https://backticks.netlify.app/)
